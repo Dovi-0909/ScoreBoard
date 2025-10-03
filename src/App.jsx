@@ -3,8 +3,8 @@ import "./App.css";
 import TimerCom from "./components/Timer";
 import { Period } from "./components/Period";
 import StatSheet from "./components/StatsSheet";
-const awayColor = "rgb(63, 121, 247)";
-const homeColor = "rgb(247, 63, 63)";
+const awayColor = "#2464d8";
+const homeColor = "#ca1922";
 function App() {
   const [homeTeam, setHomeTeam] = useState("HOME");
   const [awayTeam, setAwayTeam] = useState("AWAY");

@@ -12,7 +12,7 @@
 .App {
   width: auto;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.397);
+  background-color: rgb(30, 30, 47);
   text-align: center;
   box-sizing: border-box;
   padding: 20px;
@@ -34,7 +34,6 @@
 
 .TeamNameDiv {
   width: auto;
-  /* background-color: rgb(255, 255, 255); */
   padding: 10px;
   box-sizing: border-box;
   display: flex;
@@ -141,7 +140,7 @@
   font-size: 12px;
   font-weight: bold;
   color: rgb(255, 255, 255);
-  background-color: rgb(224, 134, 48);
+  background-color: transparent;
   text-transform: uppercase;
 }
 
@@ -228,12 +227,12 @@
 }
 
 .statsDiv {
-  background: linear-gradient(
+  /* background: linear-gradient(
     rgba(255, 190, 111, 0) 0%,
-    rgba(255, 190, 111, 0.5) 25%,
-    rgba(255, 190, 111, 0.7) 50%,
-    rgb(255, 190, 111) 100%
-  );
+    rgba(99, 99, 99, 0.5) 25%,
+    rgba(143, 143, 143, 0.7) 50%,
+    rgb(109, 109, 109) 100%
+  ); */
   width: 100%;
   height: auto;
   box-sizing: border-box;

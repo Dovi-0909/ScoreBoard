@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./StatsSheet.css";
 import Alert from "../assets/Buzzer";
+const headerColor = "#273344";
 
 export default function StatSheet({
   teamName,
@@ -96,10 +97,18 @@ export default function StatSheet({
             gap: "1rem",
           }}
         >
-          <button onClick={addPlayer} disabled={data.length >= 20}>
+          <button
+            id="TimerBttn"
+            onClick={addPlayer}
+            disabled={data.length >= 20}
+          >
             Add Player
           </button>
-          <button onClick={removePlayer} disabled={data.length <= 12}>
+          <button
+            id="TimerBttn"
+            onClick={removePlayer}
+            disabled={data.length <= 12}
+          >
             Remove Player
           </button>
         </div>
@@ -123,7 +132,7 @@ export default function StatSheet({
           <thead
             style={{
               position: "sticky",
-              background: "rgb(122, 122, 122)",
+              background: headerColor,
               top: 0,
               zIndex: 1,
             }}
@@ -222,7 +231,7 @@ export default function StatSheet({
           }}
         >
           <table>
-            <thead style={{ backgroundColor: "rgb(122, 122, 122)" }}>
+            <thead style={{ backgroundColor: headerColor }}>
               <tr>
                 <th colSpan="4">Team Fouls</th>
               </tr>
@@ -234,7 +243,7 @@ export default function StatSheet({
               </tr>
             </thead>
             <tbody>
-              <tr style={{ backgroundColor: "rgb(224, 134, 48)" }}>
+              <tr style={{ backgroundColor: headerColor }}>
                 {Array.from({ length: 4 }).map((_, quarterIdx) => (
                   <td key={`quarter-Q${quarterIdx + 1}`}>
                     {Array.from({ length: 5 }).map((_, foulIdx) => (
@@ -270,7 +279,7 @@ export default function StatSheet({
         </div>
         <div>
           <table style={{ width: "100%" }}>
-            <thead style={{ backgroundColor: "rgb(122, 122, 122)" }}>
+            <thead style={{ backgroundColor: headerColor }}>
               <tr>
                 <th colSpan="3">Time Outs</th>
               </tr>
@@ -281,7 +290,7 @@ export default function StatSheet({
               </tr>
             </thead>
             <tbody>
-              <tr style={{ backgroundColor: "rgb(224, 134, 48)" }}>
+              <tr style={{ backgroundColor: headerColor }}>
                 {Array.from({ length: 3 }).map((_, halfIdx) => (
                   <td key={`half-to${halfIdx + 1}`}>
                     {Array.from({ length: halfIdx === 2 ? 1 : 2 }).map(
@@ -306,8 +315,8 @@ export default function StatSheet({
             </tbody>
           </table>
         </div>
-        <button style={{ height: "25px" }} onClick={exportToCSV}>
-          Export CSV
+        <button id="TimerBttn" onClick={exportToCSV}>
+          Export
         </button>
       </div>
       <Alert trigger={playBuzzer} />

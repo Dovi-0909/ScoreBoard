@@ -55,9 +55,14 @@
   align-items: center;
   border: 1px solid black;
   cursor: pointer;
+  background-color: #273344;
+  color: white;
 
   &:not(:disabled):hover {
-    background-color: rgb(224, 134, 48);
-    color: white;
+    background-color:lightslategray ;
+  }
+
+  &:disabled {
+    background-color: gray;
   }
 }
